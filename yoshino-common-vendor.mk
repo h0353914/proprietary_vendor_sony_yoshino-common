@@ -415,7 +415,6 @@ PRODUCT_PACKAGES += \
     libcacao_process_ctrl \
     libcameralight \
     libcammw \
-    libcammw_util \
     libcdsprpc \
     libchromaflash \
     libdepthmapwrapper \
@@ -552,7 +551,6 @@ PRODUCT_PACKAGES += \
     libsomc_cheesescone \
     libsomc_cheesesconersc \
     libsomc_chokoballcmn \
-    libsomc_chokoballpal \
     libsomc_dars \
     libsomc_darsrsc \
     libsomc_marble \
@@ -590,13 +588,7 @@ PRODUCT_PACKAGES += \
     vendor.somc.camera.device@3.2-impl \
     vendor.somc.camera.device@3.3-impl \
     vendor.somc.camera.device@3.4-impl \
-    vendor.somc.hardware.camera.cacao@1.0 \
-    vendor.somc.hardware.camera.cacao@2.0 \
     vendor.somc.hardware.camera.cacao@3.0-impl \
-    vendor.somc.hardware.camera.cacao@3.0 \
-    vendor.somc.hardware.camera.cacao@3.1 \
-    vendor.somc.hardware.camera.device@1.0 \
-    vendor.somc.hardware.camera.provider@1.0 \
     com.fingerprints.extension@1.0 \
     com.qualcomm.qti.ant@1.0 \
     com.qualcomm.qti.dpm.api@1.0_vendor \
