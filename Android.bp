@@ -8,6 +8,7 @@ soong_namespace {
         "hardware/qcom-caf/msm8998",
         "hardware/qcom-caf/wlan",
         "vendor/qcom/opensource/dataservices",
+        "vendor/sony/camera",
     ],
 }
 
@@ -3903,33 +3904,6 @@ cc_prebuilt_library_shared {
                 "libmiscta",
                 "libsensorndkbridge",
                 "libcameralight",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcammw_util",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libcammw_util.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libhardware",
                 "libc++",
                 "libc",
                 "libm",
@@ -7858,34 +7832,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomc_chokoballpal",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libsomc_chokoballpal.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcammw",
-                "libutils",
-                "libui",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsomc_dars",
     owner: "sony",
     strip: {
@@ -8931,68 +8877,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.camera.cacao@1.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/vendor.somc.hardware.camera.cacao@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase_shim",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.camera.cacao@2.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/vendor.somc.hardware.camera.cacao@2.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase_shim",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.somc.hardware.camera.cacao@3.0-impl",
     owner: "sony",
     strip: {
@@ -9017,142 +8901,6 @@ cc_prebuilt_library_shared {
                 "vendor.somc.hardware.camera.cacao@3.0",
                 "libcacao_common",
                 "libcacao_process_ctrl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.camera.cacao@3.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/vendor.somc.hardware.camera.cacao@3.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase_shim",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.camera.cacao@3.1",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/vendor.somc.hardware.camera.cacao@3.1.so",
-            ],
-            shared_libs: [
-                "libhidlbase_shim",
-                "vendor.somc.hardware.camera.cacao@3.0",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.camera.device@1.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/vendor.somc.hardware.camera.device@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase_shim",
-                "android.hardware.camera.common@1.0",
-                "android.hardware.camera.device@1.0",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.somc.hardware.camera.provider@1.0",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/vendor.somc.hardware.camera.provider@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase_shim",
-                "android.hardware.camera.common@1.0",
-                "android.hardware.camera.device@1.0",
-                "android.hardware.camera.device@3.2",
-                "android.hardware.camera.provider@2.4",
-                "vendor.somc.hardware.camera.cacao@1.0",
-                "vendor.somc.hardware.camera.cacao@2.0",
-                "vendor.somc.hardware.camera.cacao@3.0",
-                "vendor.somc.hardware.camera.cacao@3.1",
-                "vendor.somc.hardware.camera.device@1.0",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
